@@ -1,0 +1,23 @@
+{
+  "module": "libg.so",
+  "holder": {"offset": null, "dereference": true},
+  "elixir": {"offset": null, "type": "float"},
+  "opponent_elixir": {"offset": null, "type": "float"},
+  "battle_time": {"offset": null, "type": "float"},
+  "hand": {"offset": null, "count": 5, "type": "int"},
+  "queue": {"offset": null, "count": 3, "type": "int"},
+  "towers": {
+    "offset": null,
+    "stride": 64,
+    "count": 6,
+    "fields": {"hp": null, "side": null},
+    "role_order": ["king", "left", "right"]
+  },
+  "entities": {
+    "list_offset": null,
+    "count_offset": null,
+    "stride": null,
+    "fields": {"id": null, "card": null, "side": null, "x": null, "y": null, "hp": null}
+  },
+  "poll_ms": 100
+}

@@ -13,3 +13,7 @@ tensorboard
 # 3) Gravar uma partida em vídeo (meus_scripts/gravar_partida.py):
 pillow
 # e o ffmpeg instalado no sistema (ffmpeg.org), fora do pip.
+
+# 4) Cliente ao vivo (src/clasher_new/live): ler o jogo real e jogar via ADB.
+# Requer também adb no PATH e frida-server ARM64 rodando no emulador.
+frida

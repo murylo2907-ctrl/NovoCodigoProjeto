@@ -34,6 +34,18 @@ pip install pygame fastcore numpy stable-baselines3 tensorboard frida --user --n
 3. 在两台电脑上同时运行`src/clasher_new/client_side/client.py`，选择卡组后，输入刚才的IP地址即可连接。
 4. 两个客户端都连接后，游戏会自动开始。
 
+## Cliente ao vivo (Frida + ADB)
+
+O repositório treina a IA, mas não traz a ponte que lê o jogo real e aperta os botões. `src/clasher_new/live/` é essa ponte: o Frida lê elixir, mão, torres e tropas da memória, o `live_client.py` monta a mesma observação de `environment.CREnv.observe()` e consulta o checkpoint, e o `adb_controller.py` arrasta a carta até o tile.
+
+```bash
+cd src/clasher_new/live
+python live_client.py caminho/para/checkpoint.zip --dry-run   # só decide e loga
+python live_client.py caminho/para/checkpoint.zip             # joga de verdade
+```
+
+Os offsets de memória são por versão do jogo e ficam em `live/offsets.json`; a derivação e a calibração da tela estão em [`live/README.md`](./src/clasher_new/live/README.md).
+
 ## 项目结构
 
 如果你也对训练皇室战争的AI模型非常感兴趣，那么我强烈建议你去认真阅读我这个仓库的代码。模拟器的代码总量应该两千行左右，而模型训练的代码则有约500行代码（我没统计过，纯个人感觉）。比如说，你想知道寻路机制是怎么实现的？我的模拟器是怎么处理索敌的？我的AI模型架构是什么，RL环境的观测空间和动作空间是什么？

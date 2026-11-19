@@ -1,0 +1,13 @@
+{
+  "package": "com.supercell.clashroyale",
+  "device": "usb",
+  "spawn": true,
+  "adb": {
+    "serial": null,
+    "arena": {"left": 0.0, "right": 1.0, "top": 0.115, "bottom": 0.845},
+    "hand_y": 0.905,
+    "hand_x": [0.125, 0.375, 0.625, 0.875],
+    "swipe_ms": 120
+  },
+  "log_vision_every": 2.0
+}
