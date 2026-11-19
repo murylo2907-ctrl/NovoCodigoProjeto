@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+runs/
+captures/
+meus_scripts/resultados/
+*.mp4

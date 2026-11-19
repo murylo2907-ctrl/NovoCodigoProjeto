@@ -1,0 +1,31 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Teste de velocidade",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/clasher_new/benchmark_speed.py",
+      "cwd": "${workspaceFolder}/src/clasher_new",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Torneio entre estratégias",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/meus_scripts/torneio.py",
+      "args": ["--jogos", "5"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Jogar contra um bot (estilo humano)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/meus_scripts/jogar.py",
+      "args": ["human_style_strategy"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}

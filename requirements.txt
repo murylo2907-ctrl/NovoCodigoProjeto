@@ -1,0 +1,15 @@
+# Dependências do projeto, por nível de uso.
+
+# 1) Só o simulador e o torneio entre estratégias (leve):
+numpy
+fastcore
+gymnasium
+
+# 2) Jogar contra um bot numa janela e treinar a IA (pesado, baixa torch):
+pygame
+stable-baselines3
+tensorboard
+
+# 3) Gravar uma partida em vídeo (meus_scripts/gravar_partida.py):
+pillow
+# e o ffmpeg instalado no sistema (ffmpeg.org), fora do pip.
